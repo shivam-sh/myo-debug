@@ -11,7 +11,7 @@ import SwiftUI
 struct Myo_DebugApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DiagnosticsView(bluetoothManager: BluetoothManager())
         }
     }
 }

@@ -11,6 +11,10 @@
 		4088A31D2876148E00CD4237 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088A31C2876148E00CD4237 /* ContentView.swift */; };
 		4088A31F2876149000CD4237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4088A31E2876149000CD4237 /* Assets.xcassets */; };
 		4088A3232876149000CD4237 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4088A3222876149000CD4237 /* Preview Assets.xcassets */; };
+		4088A32B2876158D00CD4237 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088A32A2876158D00CD4237 /* BluetoothManager.swift */; };
+		4088A32E287615BA00CD4237 /* Myo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088A32D287615BA00CD4237 /* Myo.swift */; };
+		4088A3322876160800CD4237 /* DiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088A3312876160800CD4237 /* DiagnosticsView.swift */; };
+		4088A33628761BA500CD4237 /* Packable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088A33528761BA500CD4237 /* Packable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,11 @@
 		4088A31E2876149000CD4237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4088A3202876149000CD4237 /* Myo_Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Myo_Debug.entitlements; sourceTree = "<group>"; };
 		4088A3222876149000CD4237 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4088A32A2876158D00CD4237 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		4088A32D287615BA00CD4237 /* Myo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Myo.swift; sourceTree = "<group>"; };
+		4088A3312876160800CD4237 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		4088A3332876167700CD4237 /* Myo-Debug-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Myo-Debug-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4088A33528761BA500CD4237 /* Packable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +61,11 @@
 		4088A3192876148E00CD4237 /* Myo Debug */ = {
 			isa = PBXGroup;
 			children = (
+				4088A3332876167700CD4237 /* Myo-Debug-Info.plist */,
+				4088A32C287615AD00CD4237 /* Models */,
+				4088A3292876157E00CD4237 /* Services */,
 				4088A31A2876148E00CD4237 /* Myo_DebugApp.swift */,
+				4088A3312876160800CD4237 /* DiagnosticsView.swift */,
 				4088A31C2876148E00CD4237 /* ContentView.swift */,
 				4088A31E2876149000CD4237 /* Assets.xcassets */,
 				4088A3202876149000CD4237 /* Myo_Debug.entitlements */,
@@ -67,6 +80,31 @@
 				4088A3222876149000CD4237 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4088A3292876157E00CD4237 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4088A32A2876158D00CD4237 /* BluetoothManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4088A32C287615AD00CD4237 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4088A33428761B9400CD4237 /* Parsing */,
+				4088A32D287615BA00CD4237 /* Myo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4088A33428761B9400CD4237 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				4088A33528761BA500CD4237 /* Packable.swift */,
+			);
+			path = Parsing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4088A31D2876148E00CD4237 /* ContentView.swift in Sources */,
+				4088A3322876160800CD4237 /* DiagnosticsView.swift in Sources */,
+				4088A32E287615BA00CD4237 /* Myo.swift in Sources */,
+				4088A32B2876158D00CD4237 /* BluetoothManager.swift in Sources */,
+				4088A33628761BA500CD4237 /* Packable.swift in Sources */,
 				4088A31B2876148E00CD4237 /* Myo_DebugApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,11 +311,12 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Myo-Debug-Info.plist";
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
@@ -301,11 +344,12 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Myo-Debug-Info.plist";
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
